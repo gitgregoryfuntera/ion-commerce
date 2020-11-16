@@ -1,0 +1,39 @@
+<div class="tab-container">
+  <ion-tabs class="bottom-tab">
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button routerLink="/main">
+        <ion-label class="text-black">Explore</ion-label>
+        <div class="indicator">
+          <span
+            routerLinkActive="dot-indicator"
+            [routerLinkActiveOptions]="{exact:true}"
+          ></span>
+        </div>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/cart">
+        <ion-icon name="cart-outline" class="text-black"></ion-icon>
+        <ion-badge>6</ion-badge>
+        <div class="indicator">
+          <span
+            routerLinkActive="dot-indicator"
+            [routerLinkActiveOptions]="{exact:true}"
+          ></span>
+        </div>
+      </ion-tab-button>
+  
+      <ion-tab-button>
+        <ion-icon name="person-outline" class="text-black"></ion-icon>
+        <div class="indicator">
+          <span
+            routerLink="/account"
+            routerLinkActive="dot-indicator"
+            [routerLinkActiveOptions]="{exact:true}"
+          ></span>
+        </div>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

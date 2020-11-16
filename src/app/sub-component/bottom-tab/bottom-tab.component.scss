@@ -1,0 +1,18 @@
+.tab-container {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+}
+
+.bottom-tab {
+    bottom: initial !important;
+    position: relative !important;
+}
+
+.dot-indicator {
+    height: 6px;
+    width: 6px;
+    background-color: #f00;
+    border-radius: 50%;
+    display: inline-block;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "ion-commerce",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
