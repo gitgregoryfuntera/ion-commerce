@@ -5,56 +5,83 @@
 </ion-header>
 
 <ion-content class="main-content has-tabs-top">
-  <ion-list-header>
-    <ion-text>
-      <h4><b>Categories</b></h4>
-    </ion-text>
-  </ion-list-header>
-  <div class="categories">
-    <div class="inline-block text-center pad-2">
-      <ion-grid>
-        <ion-row class="w-70 m-auto">
-          <ion-icon class="categories-icon" name="shirt-outline"></ion-icon>
-        </ion-row>
-        <div>Apparel</div>
-      </ion-grid>
-    </div>
+  <div class="categories-container text-black bg-white" slot="fixed">
+    <ion-list-header>
+      <ion-text>
+        <h4><b>Categories</b></h4>
+      </ion-text>
+    </ion-list-header>
+    <div class="categories">
+      <div class="inline-block text-center pad-2w">
+        <ion-grid>
+          <ion-row class="w-70 m-auto">
+            <ion-icon class="categories-icon" name="shirt-outline"></ion-icon>
+          </ion-row>
+          <div>Apparel</div>
+        </ion-grid>
+      </div>
 
-    <div class="inline-block text-center pad-2">
-      <ion-grid>
-        <ion-row class="w-70 m-auto">
-          <ion-icon class="categories-icon" name="glasses-outline"></ion-icon>
-        </ion-row>
-        <div>Accessories</div>
-      </ion-grid>
-    </div>
-    
-    <div class="inline-block text-center pad-2">
-      <ion-grid>
-        <ion-row class="w-70 m-auto">
-          <ion-icon class="categories-icon" name="game-controller-outline"></ion-icon>
-        </ion-row>
-        <div>Games</div>
-      </ion-grid>
-    </div>
+      <div class="inline-block text-center pad-2w">
+        <ion-grid>
+          <ion-row class="w-70 m-auto">
+            <ion-icon class="categories-icon" name="glasses-outline"></ion-icon>
+          </ion-row>
+          <div>Accessories</div>
+        </ion-grid>
+      </div>
+      
+      <div class="inline-block text-center pad-2w">
+        <ion-grid>
+          <ion-row class="w-70 m-auto">
+            <ion-icon class="categories-icon" name="game-controller-outline"></ion-icon>
+          </ion-row>
+          <div>Games</div>
+        </ion-grid>
+      </div>
 
-    <div class="inline-block text-center pad-2">
-      <ion-grid>
-        <ion-row class="w-70 m-auto">
-          <ion-icon class="categories-icon" name="headset-outline"></ion-icon>
-        </ion-row>
-        <div>Gadgets</div>
-      </ion-grid>
-    </div>
+      <div class="inline-block text-center pad-2w">
+        <ion-grid>
+          <ion-row class="w-70 m-auto">
+            <ion-icon class="categories-icon" name="headset-outline"></ion-icon>
+          </ion-row>
+          <div>Gadgets</div>
+        </ion-grid>
+      </div>
 
-    <div class="inline-block text-center pad-2">
-      <ion-grid>
-     <ion-row class="w-70 m-auto">
-          <ion-icon class="categories-icon" name="home-outline"></ion-icon>
-        </ion-row>
-        <div>Home Decor</div>
-      </ion-grid>
+      <div class="inline-block text-center pad-2w">
+        <ion-grid>
+      <ion-row class="w-70 m-auto">
+            <ion-icon class="categories-icon" name="home-outline"></ion-icon>
+          </ion-row>
+          <div>Home Decor</div>
+        </ion-grid>
+      </div>
     </div>
   </div>
-  <app-bottom-tab></app-bottom-tab>
+
+  <ion-list-header class="pad-t20h">
+    <ion-text>
+      <h4><b>Best Selling</b></h4>
+    </ion-text>
+  </ion-list-header>
+  
+  <ion-list>
+    <span *ngFor="let value of data;let i = index">
+      <ion-avatar slot="start">
+        <img src="https://www.gravatar.com/avatar/${i + originalLength}?d=monsterid&f=y">
+      </ion-avatar>
+      <ion-label>
+        <h2>asd</h2>
+        <p>Created asd</p>
+      </ion-label>
+    </span>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
+<app-bottom-tab></app-bottom-tab>
