@@ -66,15 +66,20 @@
   </ion-list-header>
   
   <ion-list>
-    <span *ngFor="let value of data;let i = index">
-      <ion-avatar slot="start">
-        <img src="https://www.gravatar.com/avatar/${i + originalLength}?d=monsterid&f=y">
-      </ion-avatar>
-      <ion-label>
-        <h2>asd</h2>
-        <p>Created asd</p>
-      </ion-label>
-    </span>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let value of data;let i = index">
+          <ion-card>
+            <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg" />
+            <ion-card-header>
+              <ion-card-title>Madison, WI</ion-card-title>
+              <ion-card-subtitle>Destination</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content><b>P 430.00</b></ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-list>
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
