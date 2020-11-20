@@ -4,6 +4,7 @@ import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { SubComponentModule } from 'src/app/sub-component/sub-component.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SubComponentModule } from 'src/app/sub-component/sub-component.module';
     CommonModule,
     MainRoutingModule,
     IonicModule,
-    SubComponentModule
+    SubComponentModule,
+    RouterModule
   ]
 })
 export class MainModule { }

@@ -69,7 +69,7 @@
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let value of data;let i = index">
-          <ion-card>
+          <ion-card [routerLink]="['/product', i]">
             <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg" />
             <ion-card-header>
               <ion-card-title>Madison, WI</ion-card-title>
