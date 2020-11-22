@@ -1,11 +1,68 @@
-<ion-header translucent>
+<!-- <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  product works
+  <ion-buttons class="pos-absolute">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide">
+        <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg"/>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg"/>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://img.freepik.com/free-psd/elegant-realistic-wooden-background-business-card-mockup_1094-53.jpg?size=626&ext=jpg"/>
+    </ion-slide>
+    <button type="submit" float-left ion-button  color="danger" class="btnPrev"></button>
+    <button type="submit" float-right ion-button color="danger" class="btnNext"></button>
+  </ion-slides>
+
+  <ion-list-header>
+    <ion-text>
+      <h4><b>Sample Product</b></h4>
+    </ion-text>
+  </ion-list-header>
+
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="text-center">
+          <ion-label>Size</ion-label>
+        </ion-col>
+        <ion-col>
+          <div 
+            class="ion-activatable ripple-parent text-center"
+            (click)="presentPopover($event)"
+          >
+            <b>{{ selectedSize }}</b>
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>
+        <ion-col class="text-center">
+          <ion-label>Color</ion-label>
+        </ion-col>
+        <ion-col>
+          <div class="ion-activatable ripple-parent text-center">
+             <div class="product-color"></div>
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
 </ion-content>

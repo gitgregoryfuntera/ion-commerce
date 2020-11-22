@@ -26,8 +26,24 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+// Product Slider
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white !important;
+}
+
+
 .inline-block {
     display: inline-block !important;
+}
+
+.pos-absolute {
+    position: absolute !important;
 }
 
 .text-center {
